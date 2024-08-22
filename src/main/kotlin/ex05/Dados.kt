@@ -14,9 +14,12 @@ class Dados {
         print("Quantas vezes quer jogar os dados? ")
         val jogadas = readln().toInt()
 
-        this.dado1 = Random.nextInt(1, 7)
-        this.dado2 = Random.nextInt(1, 7)
+        for (i in 1..jogadas) {
+            this.dado1 = Random.nextInt(1, 7)
+            this.dado2 = Random.nextInt(1, 7)
 
-        
+            println("\nJogada ${i}/$jogadas")
+            println("Soma dos Dados: ${this.dado1 + this.dado2}")
+        }
     }
 }
